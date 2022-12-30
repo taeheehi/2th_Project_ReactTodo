@@ -1,0 +1,16 @@
+.container {
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-bg);
+  /* ㄴ 헤더와 본문쪽 내용의 색이 살짝 달라짐 */
+}
+
+.list {
+  flex: 1 1 auto;
+  /* ㄴ리스트 내용 꽉 채우고 add부분 아래로 가게 하는 것
+     그로우와 슈링크 1 1 주고 베이시스를 auto로 줄 거에요. */
+  overflow-y: auto;
+  /* ㄴ 오버플로우가 발생하면 스크롤 생기게 하는 것  */
+}

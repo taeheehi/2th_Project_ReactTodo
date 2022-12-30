@@ -1,0 +1,96 @@
+:root {
+  --color-bg-dark: #f5f5f5;
+  --color-bg: #fdfffd;
+  --color-grey: #d1d1d1;
+  --color-text: #22243b;
+  --color-accent: #f15;
+  --color-white: white;
+  --color-scrollbar: #aaa7a7;
+}
+
+html.dark {
+  --color-bg-dark: #1a1c35;
+  --color-bg: #22243b;
+  --color-grey: #4e4e4e;
+  --color-text: #fdfffd;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  /* ㄴ 아이템 중간에 오도록  */
+  justify-content: center;
+  /* ㄴ 가로 중간에 오도록 */
+  align-items: center;
+  /* ㄴ 수직에 아이템 올 수 있도록 */
+  font-size: 1.2rem;
+
+  background: rgb(249, 134, 162);
+  background: radial-gradient(
+    circle,
+    rgba(249, 134, 162, 1) 10%,
+    rgba(241, 234, 236, 1) 100%
+  );
+}
+
+#root {
+  width: 100%;
+  height: 60%;
+  max-width: 500px;
+  background-color: var(--color-bg-dark);
+  overflow: hidden;
+  /* ㄴ오버플로우가 발생하면 : 즉 자식이  부모요소보다 더 커졌을 때, 그밖을 침범하는 아이들을 다 hidden해주기로 */
+
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-shadow: 5px 5px 21px 4px rgba(0, 0, 0, 0.45);
+  box-shadow: 5px 5px 21px 4px rgba(0, 0, 0, 0.45);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+
+  /* 🟠content-box : 지정한 CSS width 및 height를 컨텐츠 영역에만 적용합니다. border, padding, margin은 따로 계산되어 전체 영역이 설정값보다 커질 수 있습니다.
+🟡border-box : 지정한 CSS width 및 height를 전체 영역에 적용합니다. border, padding, margin을 모두 합산하기 때문에 컨텐츠 영역이 설정값보다 적어질 수 있습니다.
+  ref : 
+  https://dasima.xyz/css-box-sizing-content-box-vs-border-box/ */
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-scrollbar);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-accent);
+}
